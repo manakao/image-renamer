@@ -206,7 +206,7 @@ func NewImage(path, extension string, createdAt time.Time) Image {
 	hour, min, sec := createdAt.Clock()
 
 	dir := fmt.Sprintf("%02d", year)
-	file := fmt.Sprintf("%02d.%02d.%02d-%02d:%02d:%02d", year, month, day, hour, min, sec) + extension
+	file := fmt.Sprintf("%02d.%02d.%02d_%02d.%02d.%02d", year, month, day, hour, min, sec) + extension
 
 	return Image{
 		FromPath:  path,
